@@ -1,3 +1,6 @@
+server: server.c mime.data.c mime.c connection.c
+	$(CC) -Wall -Wextra -std=c89 -pedantic $^ -o $@ #-static-libgcc -static -lc
+
 all: thirdparty/lib/libminiupnpc.a
 MINIUPNPC_URL=http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.8.tar.gz
 
